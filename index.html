@@ -134,7 +134,7 @@
                 <p style="font-size: 1.8vw;">A.P.C., SANDRO, IL BISONTE 등<br>다양한 가방과 액세서리로 구성된<br>랜덤박스를 추첨합니다.</p>
             </div>
             <div class="animated" style="width: 40%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
-                <img src="IMAGES/randombox/r1.png" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r2.png" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r3.png" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r4.png" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r5.png" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r6.png" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r7.png" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r8.png" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r9.png" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 15px #000;">
+                <img src="IMAGES/randombox/r1.png" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r2.png" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r3.png" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r4.png" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r5.png" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r6.png" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r7.png" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r8.png" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px #000;"><img src="IMAGES/randombox/r9.png" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 15px #000;">
             </div>
         </div>
 
@@ -237,8 +237,9 @@
                     spread: 90,
                     origin: { y: -0.1, x: Math.random() },
                     colors: goldColors,
-                    scalar: Math.random() * 0.5 + 0.5,
-                    drift: Math.random() * 2 - 1,
+                    scalar: Math.random() * 0.4 + 0.3, // 속도조절
+                    drift: Math.random() - 0.5, // 좌우움직임 조절
+                    gravity: 0.5, // 중력조절 (낮을수록 느림)
                     zIndex: 1
                 });
                 requestAnimationFrame(rainGold);
