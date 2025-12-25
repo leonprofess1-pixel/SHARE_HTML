@@ -188,7 +188,7 @@
             <div class="animated" style="width:100%; height: 95%; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; gap: 10px; overflow-y: auto;">
                 <h2 class="slide-title">당첨자 명단 요약</h2>
                 <div style="text-align: left; width: 90%; max-width: 1200px; font-size: 1.1vw; line-height: 1.4; color: var(--text-color);">
-                    <p style="font-weight: bold; font-size: 1.5vw; margin-bottom: 5px;">1. 랜덤박스 드로우 (23명)</p>
+                    <p style="font-weight: bold; font-size: 1.5vw; margin-bottom: 5px;">1. 랜덤박스 드로우 당첨자(23명)</p>
                     <p id="summary-random-box" style="margin-left: 15px; word-break: break-word;"></p>
                     
                     <p style="font-weight: bold; font-size: 1.5vw; margin-top: 15px; margin-bottom: 5px;">2. 상품 당첨자</p>
@@ -226,7 +226,7 @@
                 const randomWinners = Array.from(document.querySelectorAll('[data-prize-type="random-box"]'))
                     .map(input => input.value.trim())
                     .filter(name => name !== '');
-                document.getElementById('summary-random-box').textContent = '당첨자 : ' + (randomWinners.length ? randomWinners.join(' / ') : '미추첨');
+                document.getElementById('summary-random-box').textContent = (randomWinners.length ? randomWinners.join(' / ') : '미추첨');
 
                 // 2. Products
                 const productContainer = document.getElementById('summary-products');
