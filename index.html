@@ -231,16 +231,16 @@
             function rainGold() {
                 if (!isRainingGold) return;
                 // 매 프레임마다 금가루를 생성할 확률을 줄여 전체 양을 조절
-                if (Math.random() < 0.7) { // 70% 확률로 금가루 생성 (조절 가능)
+                if (Math.random() < 0.35) { // 35% 확률로 금가루 생성 (조절 가능)
                     goldDustConfetti({
                         particleCount: 1, // 금가루처럼 적은 입자
                         angle: 270,
                         spread: 60, // 금가루가 퍼지는 정도를 줄여 양이 적어 보이도록 조정
-                        origin: { y: -0.1, x: Math.random() },
+                        origin: { y: -0.5, x: Math.random() }, // 화면보다 더 위에서 시작하도록 수정
                         colors: goldColors, // 금가루 색상 적용
                         scalar: Math.random() * 0.5 + 0.5, // 크기 원복 (기존 크기)
                         drift: Math.random() * 0.5 - 0.25, // 좌우움직임 조절 (느리게 유지)
-                        gravity: 0.3, // 중력조절 (느린 속도 유지)
+                        gravity: 0.3, // 중력조절 (원래 속도)
                         zIndex: 1
                     });
                 }
