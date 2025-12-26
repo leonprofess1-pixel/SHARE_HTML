@@ -94,7 +94,7 @@
         }
         .winner-input:focus { transform: scale(1.05); outline: 2px solid var(--gold-color); }
         
-        .random-box-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; width: 100%; max-width: 1800px; }
+        .random-box-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; width: 100%; max-width: 3600px; }
 
         #nav-buttons { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
         #nav-buttons button {
@@ -359,7 +359,14 @@
                         e.preventDefault();
                         const rect = input.getBoundingClientRect();
                         const origin = { x: (rect.left + rect.right) / 2 / window.innerWidth, y: (rect.top + rect.bottom) / 2 / window.innerHeight };
-                        confetti({ particleCount: 100, spread: 70, origin, zIndex: 2000, colors: ['#ffd700', '#ffec8b', '#ffffff'] });
+                        const colorfulColors = ['#FFC700', '#FF0000', '#2E3192', '#41A2A'];
+                        confetti({
+                            particleCount: 400,
+                            spread: 180,
+                            origin, // 입력 필드 위치에서 터지도록 origin 사용
+                            colors: colorfulColors,
+                            zIndex: 2000
+                        });
                     }
                 });
             });
